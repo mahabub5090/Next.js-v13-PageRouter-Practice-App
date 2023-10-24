@@ -1,10 +1,13 @@
 import { useRouter } from "next/router";
 import styles from "../styles/Body.module.css";
 export default function Body() {
+  
   const router = useRouter();
+
   const handle = (path) => {
     router.push(path);
   };
+
   return (
     <div>
       <div className={styles.body}>

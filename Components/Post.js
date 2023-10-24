@@ -9,9 +9,11 @@ export default function Post({post}){
               <h2 className="card-title">Title: {post.title}</h2>
               <p>Content: {post.content}</p>
               <div className="card-actions justify-end">
-                <Link href={`./posts/${post.id}`}>
+
+                <Link href={`/posts/${post.id}`}>
                   <button className="btn">See More</button>
                 </Link>
+
               </div>
             </div>
           </div>
