@@ -1,0 +1,11 @@
+.body {
+  display: flex;
+  border: 5px solid blueviolet;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 5px;
+  background-color: black;
+  font-size: 24px;
+  color: aqua;
+  justify-content: center;
+}
