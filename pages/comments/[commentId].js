@@ -22,6 +22,10 @@ export default function commentId() {
       // console.log(path);
       .then((res) => {
         setData(res);
+      })
+      .catch((e) => {
+        console.log(e);
+        setData(null);
       });
   }
 
@@ -46,7 +50,7 @@ export default function commentId() {
         <div>
           <Head>
             {/* <title>Comment-{path}</title> */}
-            {data && <title>Comment-{data.id}</title>}
+            {data && <title>Comment-{data?.id}</title>}
           </Head>
           <div>
             <Link href="/" className="btn btn-accent m-3 ">
@@ -54,15 +58,17 @@ export default function commentId() {
             </Link>
           </div>
           <div>
-            {data != undefined && (
-              // {data && (
-              <p
-                className="text-3xl m-10 bg-blue-800 rounded-lg p-7"
-                key={data.id}
-              >
-                Comment-{path}: {data.comment}
-              </p>
-            )}
+            {/* {data && ( */}
+            {/* {data != undefined && ( */}
+            <p
+              className="text-3xl m-10 bg-blue-800 rounded-lg p-7"
+              // key={data.id}
+              key={data?.id}
+            >
+              {/* Comment-{path}: {data.comment} */}
+              Comment-{path}: {data?.comment}
+            </p>
+            {/*  )} */}
             <Link href={"../comments"} className="btn-accent flex m-3 btn">
               Go Back
             </Link>
